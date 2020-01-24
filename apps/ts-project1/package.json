@@ -6,7 +6,8 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.0",
-    "@project-ui/button": "0.1.0"
+    "@project-ui/button": "0.1.0",
+    "@project-ui/input": "0.1.0"
   },
   "devDependencies": {
     "@bradfordlemley/react-scripts": "^2.0.402",

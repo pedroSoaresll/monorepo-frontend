@@ -19,7 +19,6 @@
     "typescript": "^3.7.5"
   },
   "devDependencies": {
-    "typescript": "^3.1.5",
     "@bradfordlemley/react-scripts": "^2.0.402",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",

@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 
 import Button from "@project-ui/button";
+import Input from "@project-ui/input";
 
 const App: React.FC = () => {
   return (
@@ -22,6 +23,7 @@ const App: React.FC = () => {
         </a>
 
         <Button>Ola mundo</Button>
+        <Input />
       </header>
     </div>
   );

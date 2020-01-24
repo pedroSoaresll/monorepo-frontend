@@ -155,7 +155,7 @@ and your `my-app/tsconfig.json` must be like this:
 
 # Using your first shared component inside your react-app (CRA)
 
-You can import a shared component by name defined in your `sahred-components/package.json` respected. You can copy it name and put in the `my-app/package.json` of your react app as **dependencies**
+You can import a shared component by the name defined in your `shared-components/package.json` respected. You can copy it name and put in the `my-app/package.json` of your react app as **dependencies**
 
 ```json
 {
@@ -163,4 +163,57 @@ You can import a shared component by name defined in your `sahred-components/pac
     "@project-ui/button": "0.1.0"
   }
 }
+```
+
+Then, import this dependency in your react-app component and use them
+
+```js
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+
+import Button from "@project-ui/button";
+
+const App: React.FC = () => {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+
+        <Button>Ola mundo</Button>
+      </header>
+    </div>
+  );
+};
+
+export default App;
+```
+
+# How create a shared component
+
+Go to `./components/` and and create new folder representing your new shared component
+
+```
+components
+  | --new-shared-component
+    | --src
+      | --index.tsx
+      | --index.story.tsx
+      | --styles.ts
+    | --package.json
+```
+
+```sh
+npm init -y
 ```
