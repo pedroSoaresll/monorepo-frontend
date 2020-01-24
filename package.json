@@ -6,7 +6,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "clean": "lerna clean -f --yes && rm -rf node_modules",
+    "clean": "./node_modules/.bin/lerna clean -f --yes && rm -rf node_modules",
     "reset": "yarn run clean && yarn",
     "app2": "cd apps/cra-app2 && yarn start",
     "app3": "cd apps/cra-app3 && yarn start",
@@ -35,7 +35,6 @@
   },
   "workspaces": [
     "apps/*",
-    "comps/*",
-    "cra-comps/*"
+    "components/*"
   ]
 }

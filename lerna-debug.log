@@ -1,0 +1,37 @@
+0 silly input []
+1 silly flags {
+1 silly flags   _: [ 'bootstrap' ],
+1 silly flags   'reject-cycles': false,
+1 silly flags   rejectCycles: false,
+1 silly flags   args: []
+1 silly flags }
+2 verbose rootPath /home/oliveira/Projects/stone/cra-monorepo-examples
+3 info version 2.11.0
+4 silly existsSync /home/oliveira/Projects/stone/cra-monorepo-examples/VERSION
+5 silly initialize attempt
+6 silly npmConfig {
+6 silly npmConfig   registry: undefined,
+6 silly npmConfig   npmClient: 'yarn',
+6 silly npmConfig   npmClientArgs: undefined,
+6 silly npmConfig   mutex: 'network:36441'
+6 silly npmConfig }
+7 silly initialize success
+8 silly execute attempt
+9 info Bootstrapping 8 packages
+10 silly installInDirOriginalPackageJson /home/oliveira/Projects/stone/cra-monorepo-examples
+11 silly getExecOpts { cwd: '/home/oliveira/Projects/stone/cra-monorepo-examples' }
+12 silly installInDir [
+12 silly installInDir   'yarn',
+12 silly installInDir   [ 'install', '--mutex', 'network:36441', '--non-interactive' ]
+12 silly installInDir ]
+13 error execute callback with error
+14 error Error: stderr maxBuffer exceeded
+14 error     at PassThrough.<anonymous> (/home/oliveira/Projects/stone/cra-monorepo-examples/node_modules/get-stream/index.js:30:12)
+14 error     at PassThrough.emit (events.js:228:7)
+14 error     at addChunk (_stream_readable.js:309:12)
+14 error     at readableAddChunk (_stream_readable.js:286:13)
+14 error     at PassThrough.Readable.push (_stream_readable.js:224:10)
+14 error     at PassThrough.Transform.push (_stream_transform.js:150:32)
+14 error     at PassThrough.afterTransform (_stream_transform.js:94:10)
+14 error     at PassThrough._transform (_stream_passthrough.js:44:3)
+14 error     at PassThrough.Transform._read (_stream_transform.js:189:10)
