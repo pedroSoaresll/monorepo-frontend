@@ -214,6 +214,64 @@ components
     | --package.json
 ```
 
+you can create a `package.json` using
+
 ```sh
-npm init -y
+$ npm init -y
+```
+
+and define a `main` to you entripoint, for example:
+
+```json
+"main": "src/index.tsx"
+```
+
+### index.tsx file example
+
+```js
+import React from "react";
+
+import { Button as SButton } from "./styles";
+
+export default function Button({ children }: { children: string }) {
+  return <SButton>{children}</SButton>;
+}
+```
+
+### storybook file example
+
+```js
+import React from "react";
+import { storiesOf } from "@storybook/react";
+
+import Button from ".";
+
+storiesOf("Button", module).add("default", () => <Button>Ola mundo</Button>);
+```
+
+### styles.ts file example with styled component
+
+```js
+import styled from "styled-components";
+
+export const Button = styled.button`
+  padding: 5px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid #eee;
+`;
+```
+
+### unit test file example
+
+```js
+import React from "react";
+import { render } from "@testing-library/react";
+import Button from ".";
+
+test("renders 'Ola mundo'", () => {
+  const { getByText } = render(<Button>Ola mundo</Button>);
+  const linkElement = getByText(/Ola mundo/i);
+  expect(linkElement).toBeInTheDocument();
+});
 ```
