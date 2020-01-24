@@ -1,5 +1,7 @@
 import React from "react";
 
+import { InputStyled } from "./styles";
+
 export default function Input() {
-  return <input placeholder="Escreva algo..." />;
+  return <InputStyled onChangeCapture={console.log} />;
 }

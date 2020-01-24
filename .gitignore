@@ -26,3 +26,5 @@ package-lock.json
 .jest-coverage
 
 lerna-debug.log
+
+report\.*
