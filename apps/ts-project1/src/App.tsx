@@ -1,7 +1,8 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Comp2 from "comp2";
+
+import Button from "@project-ui/button";
 
 const App: React.FC = () => {
   return (
@@ -20,7 +21,7 @@ const App: React.FC = () => {
           Learn React
         </a>
 
-        <Comp2 a={1} b={3} />
+        <Button>Ola mundo</Button>
       </header>
     </div>
   );
