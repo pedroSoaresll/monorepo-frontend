@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import Comp2 from 'comp2';
-import TsComp1 from 'tscomp1/tscomp1';
-import './App.css';
-import IntComp1 from './comp1';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import Comp2 from "comp2";
+import TsComp1 from "tscomp1/tscomp1";
+import "./App.css";
 
 const MyData = {
   a: "A",
-  b: "B",
+  b: "B"
 };
 
 class App extends Component {
@@ -19,8 +18,9 @@ class App extends Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
-          <p>{MyData.a} {MyData.b}</p>
-          <IntComp1 />
+          <p>
+            {MyData.a} {MyData.b}
+          </p>
           <TsComp1 />
           <Comp2 a="myA" b="myB" />
           <a

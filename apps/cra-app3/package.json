@@ -28,8 +28,7 @@
     ]
   },
   "sourceWorkspaces": [
-    "comps/*",
-    "cra-comps/*"
+    "components/*"
   ],
   "devDependencies": {
     "@bradfordlemley/react-scripts": "^2.0.402"

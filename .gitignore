@@ -24,3 +24,5 @@ package-lock.json
 
 .jest-cache
 .jest-coverage
+
+lerna-debug.log

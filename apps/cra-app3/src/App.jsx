@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-
+import './App.css'
 import {Add, Subtract} from 'comp1';
 import Comp2 from 'comp2';
 

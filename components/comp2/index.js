@@ -4,7 +4,6 @@ import {Add} from 'comp1';
 
 const Comp2 = ({a, b}) =>
   <div>
-    caroline Bicouv!
     Comp2: <Add a={a} b={b} />
   </div>
 
