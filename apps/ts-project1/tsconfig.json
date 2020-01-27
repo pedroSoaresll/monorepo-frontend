@@ -13,11 +13,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
-    "baseUrl": "./src",
-    "paths": {
-      "@interfaces/*": ["interfaces/*"]
-    }
+    "jsx": "preserve"
   },
   "include": ["src", "../../components/**/*"]
 }
