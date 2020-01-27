@@ -11,6 +11,7 @@
     "app2": "cd apps/cra-app2 && yarn start",
     "app3": "cd apps/cra-app3 && yarn start",
     "test": "jest --bail --silent",
+    "test:tdd": "jest --watch",
     "test:ci": "jest --ci --silent",
     "coverage": "jest --silent --coverage",
     "storybook": "start-storybook -p 5555"
