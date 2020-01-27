@@ -1,4 +1,4 @@
-import IActionReturns from '@interfaces/IActionReturns'
+import IActionReturns from '../../../interfaces/IActionReturns'
 
 export interface IPayloadExampleSum {
   a: number,

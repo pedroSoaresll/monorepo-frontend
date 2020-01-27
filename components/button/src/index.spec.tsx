@@ -1,6 +1,6 @@
-import React from "react";
-import { render } from "@testing-library/react";
-import Button from ".";
+import React from 'react';
+import { render } from '@testing-library/react';
+import Button from '.';
 
 test("renders 'Ola mundo'", () => {
   const { getByText } = render(<Button>Ola mundo</Button>);

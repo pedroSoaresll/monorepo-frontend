@@ -1,9 +1,9 @@
 import produce from 'immer';
-import IActionReturns from '@interfaces/IActionReturns';
+import IActionReturns from '../../../interfaces/IActionReturns';
 import { IPayloadExampleSum } from './action';
 
 export default function example(
-  state: Array<Number> = [],
+  state: Array<number> = [],
   action: IActionReturns<IPayloadExampleSum>
 ) {
   switch (action.type) {
