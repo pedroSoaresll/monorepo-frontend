@@ -16,9 +16,7 @@
     "coverage": "jest --silent --coverage",
     "storybook": "start-storybook -p 5555"
   },
-  "dependencies": {
-    "typescript": "^3.7.5"
-  },
+  "dependencies": {},
   "devDependencies": {
     "typescript": "~3.7.2",
     "@babel/cli": "^7.8.3",
