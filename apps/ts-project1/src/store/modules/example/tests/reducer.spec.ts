@@ -2,14 +2,19 @@ import reducer from '../reducer';
 import { sum } from '../action';
 
 describe('Reducer Suite Tests', () => {
+  test('@example/sum return default state', () => {
+    const newState = reducer(undefined, {});
+    expect(newState).toEqual([]);
+  });
+
   test('@example/sum return own state', () => {
-    const reduce = reducer([], {});
-    expect(reduce).toEqual([]);
+    const newState = reducer([], {});
+    expect(newState).toEqual([]);
   });
 
   test('@example/sum return own state with same values', () => {
-    const reduce = reducer([1, 2, 3], {});
-    expect(reduce).toEqual([1, 2, 3]);
+    const newState = reducer([1, 2, 3], {});
+    expect(newState).toEqual([1, 2, 3]);
   });
 
   test('@example/sum modify state', () => {
