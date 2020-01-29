@@ -4,6 +4,6 @@ import { Repository, RepositoriesTypes } from './types';
 export const loadRequest = () => action(RepositoriesTypes.LOAD_REQUEST);
 
 export const loadSuccess = (data: Repository[]) =>
-  action(RepositoriesTypes.LOAD_SUCCESS, data);
+  action(RepositoriesTypes.LOAD_SUCCESS, { data });
 
 export const loadFailure = () => action(RepositoriesTypes.LOAD_FAILURE);

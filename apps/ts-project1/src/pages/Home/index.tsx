@@ -1,29 +1,27 @@
-import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux'
-import { ApplicationState } from '../../store'
-import * as ExampleActions from '../../store/ducks/example/actions'
+import React, { useState, useEffect } from 'react';
+import { Dispatch } from 'redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { Action } from 'typesafe-actions';
+import { ApplicationState } from '../../store';
+import * as RepositoriesActions from '../../store/ducks/repositories/actions';
 
 export default function Home() {
-  const [value, setValue] = useState('')
-  const examples = useSelector((state: ApplicationState) => state.examples)
-  const dispatch = useDispatch()
+  const repositories = useSelector(
+    (state: ApplicationState) => state.repositories
+  );
+  const dispatch = useDispatch<Dispatch<Action>>();
 
-  function handleAdd() {
-    dispatch(ExampleActions.sum(parseInt(value), 2))
-    setValue('')
-  }
+  useEffect(() => {
+    dispatch(RepositoriesActions.loadRequest());
+  }, [dispatch]);
 
   return (
     <>
-      <h1>Ola mundo: Home --</h1>
-      <ul>{ examples.data.map(ex => (
-        <li>{ex}</li>
-      )) }</ul>
-
-      <input type="number" value={value} onInput={(e) => setValue(e.currentTarget.value)}/>
-
-      <button onClick={handleAdd}>Adicionar</button>
+      <ul>
+        {repositories.data.map(ex => (
+          <li key={ex.id}>{ex.name}</li>
+        ))}
+      </ul>
     </>
-
   );
 }
