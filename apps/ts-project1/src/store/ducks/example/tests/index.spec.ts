@@ -1,5 +1,6 @@
 import reducer from '..';
 import { ExamplesTypes, ExamplesState } from '../types'
+import * as ExampleActions from '../actions';
 
 describe('Reducer Suite Tests', () => {
   test(`${ExamplesTypes.SUM_REQUEST} return default state`, () => {
@@ -26,13 +27,7 @@ describe('Reducer Suite Tests', () => {
 
   test(`${ExamplesTypes.SUM_REQUEST} modify state`, () => {
     const initialState: ExamplesState = { data: [] };
-    const action = {
-      type: ExamplesTypes.SUM_REQUEST,
-      values: {
-        a: 2,
-        b: 2
-      }
-    }
+    const action = ExampleActions.sum(2, 2);
 
     const newState = reducer(initialState, action);
     expect(newState).toEqual({
